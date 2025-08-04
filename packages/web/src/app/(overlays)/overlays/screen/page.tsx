@@ -5,8 +5,8 @@ import { HighlightedMessageFooter, TicketFooter } from "@/components/elements";
 import { Carousel } from "@/components/carousel";
 import { TomorrowFooter } from "@/components/elements/tomorrow";
 import { TerminalFooter } from "@/components/elements/terminal";
-import { ProawsFooter } from "@/components/elements/proaws";
 import { DefaultFooter } from "@/components/elements/footer";
+import { OpencodeFooter } from "@/components/elements/opencode";
 import { useOverlaysContext } from "../context";
 
 export default function ScreenPage() {
@@ -19,9 +19,9 @@ export default function ScreenPage() {
       ) : (
         <Carousel interval={2} prioritizeFirst>
           <DefaultFooter />
+          <OpencodeFooter />
           <TomorrowFooter />
           <TerminalFooter />
-          <ProawsFooter />
           <TicketFooter />
         </Carousel>
       )}

@@ -4,7 +4,6 @@ import React from "react";
 import { Carousel } from "@/components/carousel";
 import { TomorrowBanner } from "@/components/elements/tomorrow";
 import { TerminalBanner } from "@/components/elements/terminal";
-import { ProawsBanner } from "@/components/elements/proaws";
 import { useOverlaysContext } from "../context";
 import { Overlay } from "@/components/overlay";
 import { Grid } from "@/components/grid";
@@ -12,6 +11,7 @@ import { AudioSpectrum } from "@/components/audio-spectrum";
 import { fadeAudioOut } from "@/lib/audio";
 import ThemeMusic from "@/components/theme-music";
 import { useEvent } from "@/hooks/use-event";
+import { OpencodeBanner } from "@/components/elements/opencode";
 
 export default function BreakPage() {
   const context = useOverlaysContext();
@@ -52,9 +52,9 @@ export default function BreakPage() {
           audioRef.current && (
             <Carousel interval={0.5} prioritizeFirst>
               <AudioSpectrum audioRef={audioRef} />
-              <TerminalBanner />
+              <OpencodeBanner />
               <TomorrowBanner />
-              <ProawsBanner />
+              <TerminalBanner />
             </Carousel>
           )
         }

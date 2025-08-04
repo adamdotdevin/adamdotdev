@@ -5,7 +5,6 @@ import { BrandMark } from "@/components/elements";
 import { Carousel } from "@/components/carousel";
 import { TomorrowBanner } from "@/components/elements/tomorrow";
 import { TerminalBanner } from "@/components/elements/terminal";
-import { ProawsBanner } from "@/components/elements/proaws";
 import { useOverlaysContext } from "../context";
 import { Overlay } from "@/components/overlay";
 import { Grid } from "@/components/grid";
@@ -14,6 +13,7 @@ import ThemeMusic from "@/components/theme-music";
 import { useEvent } from "@/hooks/use-event";
 import { fadeAudioOut } from "@/lib/audio";
 import { formatDate } from "@/lib/utils";
+import { OpencodeBanner } from "@/components/elements/opencode";
 
 export default function OutroPage() {
   const context = useOverlaysContext();
@@ -64,9 +64,9 @@ export default function OutroPage() {
           audioRef.current && (
             <Carousel interval={1 / 4}>
               <AudioSpectrum audioRef={audioRef} />
-              <TerminalBanner />
+              <OpencodeBanner />
               <TomorrowBanner />
-              <ProawsBanner />
+              <TerminalBanner />
             </Carousel>
           )
         }

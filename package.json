@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "sst dev",
-    "sso": "aws sso login --sso-session=adamdotdev"
+    "sso": "aws sso login --sso-session=adamdotdev",
+    "obs": "/Applications/OBS.app/Contents/MacOS/OBS --use-fake-ui-for-media-stream --allow-file-access-from-files --enable-media-stream"
   },
   "workspaces": [
     "packages/*"

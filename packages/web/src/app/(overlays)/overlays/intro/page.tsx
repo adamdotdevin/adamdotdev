@@ -5,7 +5,6 @@ import { BrandMark, Ticket } from "@/components/elements";
 import { Carousel } from "@/components/carousel";
 import { TomorrowBanner } from "@/components/elements/tomorrow";
 import { TerminalBanner } from "@/components/elements/terminal";
-import { ProawsBanner } from "@/components/elements/proaws";
 import { useOverlaysContext } from "../context";
 import { Overlay } from "@/components/overlay";
 import { TitleScreen } from "./title-screen";
@@ -15,6 +14,7 @@ import { AudioSpectrum } from "@/components/audio-spectrum";
 import { fadeAudioOut } from "@/lib/audio";
 import { formatDate } from "@/lib/utils";
 import ThemeMusic from "@/components/theme-music";
+import { OpencodeBanner } from "@/components/elements/opencode";
 
 const AUDIO_FADE_LENGTH = 5 * 1000;
 
@@ -82,9 +82,9 @@ export default function IntroPage() {
               <Carousel interval={0.5} prioritizeFirst>
                 <AudioSpectrum audioRef={audioRef} />
                 <Ticket />
-                <TerminalBanner />
+                <OpencodeBanner />
                 <TomorrowBanner />
-                <ProawsBanner />
+                <TerminalBanner />
               </Carousel>
             )
           }
