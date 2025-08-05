@@ -79,7 +79,7 @@
         "@twurple/chat": "^7.0.3",
         "@twurple/eventsub-ws": "^7.0.3",
         "hono": "4.0.1",
-        "obs-websocket-js": "5.0.6",
+        "obs-websocket-js": "5.0.5",
         "zod": "3.23.8",
       },
       "devDependencies": {
@@ -130,6 +130,9 @@
         "sharp": "0.33.1",
       },
     },
+  },
+  "patchedDependencies": {
+    "obs-websocket-js@5.0.5": "patches/obs-websocket-js@5.0.5.patch",
   },
   "packages": {
     "@adamdotdev/core": ["@adamdotdev/core@workspace:packages/core"],
@@ -898,7 +901,7 @@
 
     "obliterator": ["obliterator@1.6.1", "", {}, "sha512-9WXswnqINnnhOG/5SLimUlzuU1hFJUc8zkwyD59Sd+dPOMf05PmnYG/d6Q7HZ+KmgkZJa1PxRso6QdM3sTNHig=="],
 
-    "obs-websocket-js": ["obs-websocket-js@5.0.6", "", { "dependencies": { "@msgpack/msgpack": "^2.7.1", "crypto-js": "^4.1.1", "debug": "^4.3.2", "eventemitter3": "^5.0.1", "isomorphic-ws": "^5.0.0", "type-fest": "^3.11.0", "ws": "^8.13.0" } }, "sha512-tHRq8py1XrdlMhSV+N/KTGHqoRIcsBBXbjcA9ex21k128iQ7YXjxzNWs3s9gidP1tEcIyVuJu8FnPgrSBWGm0Q=="],
+    "obs-websocket-js": ["obs-websocket-js@5.0.5", "", { "dependencies": { "@msgpack/msgpack": "^2.7.1", "crypto-js": "^4.1.1", "debug": "^4.3.2", "eventemitter3": "^5.0.1", "isomorphic-ws": "^5.0.0", "type-fest": "^3.11.0", "ws": "^8.13.0" } }, "sha512-mSMqLXJ4z28jgwy7Ecv8CtpYh/xdbcn524kq0n6wT3kN6xkgWU/Zc6OtiVZo+gyyylC0anjehMLEVF+CDSwccw=="],
 
     "oidc-token-hash": ["oidc-token-hash@5.1.1", "", {}, "sha512-D7EmwxJV6DsEB6vOFLrBM2OzsVgQzgPWyHlV2OOAVj772n+WTXpudC9e9u5BVKQnYwaD30Ivhi9b+4UeBcGu9g=="],
 

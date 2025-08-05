@@ -1,0 +1,27 @@
+diff --git a/dist/msgpack.modern.js b/dist/msgpack.modern.js
+index 4636acbe35899f77018f41a2e96e6515504459f5..ca2576fba15364535a5265372487af9916d411ad 100644
+--- a/dist/msgpack.modern.js
++++ b/dist/msgpack.modern.js
+@@ -391,7 +391,6 @@ class BaseOBSWebSocket extends EventEmitter {
+    * @returns Promise for hello data
+    */
+   async createConnection(url) {
+-    var _this$socket;
+     const connectionOpenedPromise = this.internalEventPromise('ConnectionOpened');
+     const helloPromise = this.internalEventPromise(`op:${WebSocketOpCode.Hello}`);
+     this.socket = new WebSocketIpml(url, this.protocol);
+@@ -400,14 +399,6 @@ class BaseOBSWebSocket extends EventEmitter {
+     this.socket.onerror = this.onError.bind(this);
+     this.socket.onclose = this.onClose.bind(this);
+     await connectionOpenedPromise;
+-    const protocol = (_this$socket = this.socket) == null ? void 0 : _this$socket.protocol;
+-    // Browsers don't autoclose on missing/wrong protocol
+-    if (!protocol) {
+-      throw new OBSWebSocketError(-1, 'Server sent no subprotocol');
+-    }
+-    if (protocol !== this.protocol) {
+-      throw new OBSWebSocketError(-1, 'Server sent an invalid subprotocol');
+-    }
+     return helloPromise;
+   }
+   /**
