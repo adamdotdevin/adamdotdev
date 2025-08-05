@@ -1,11 +1,10 @@
 FROM oven/bun:latest
 
 WORKDIR /app
-RUN mkdir packages patches
+RUN mkdir packages 
 COPY package.json ./
 COPY packages/*/package.json ./packages/
 COPY packages ./packages
-COPY patches ./patches
 COPY bun.lock .
 RUN bun install
 WORKDIR /app/packages/service

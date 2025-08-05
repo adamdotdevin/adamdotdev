@@ -17,8 +17,5 @@
     "@tsconfig/node20": "20.1.4",
     "typescript": "5.4.5"
   },
-  "author": "Adam Elmore <me@adam.dev> (https://adam.dev/)",
-  "patchedDependencies": {
-    "obs-websocket-js@5.0.5": "patches/obs-websocket-js@5.0.5.patch"
-  }
+  "author": "Adam Elmore <me@adam.dev> (https://adam.dev/)"
 }
