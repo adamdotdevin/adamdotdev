@@ -32,7 +32,6 @@
     "@twurple/auth": "^7.0.3",
     "@twurple/chat": "^7.0.3",
     "@twurple/eventsub-ws": "^7.0.3",
-    "drizzle-kit": "0.21.1",
     "drizzle-orm": "0.30.10",
     "electrodb": "^2.14.2",
     "luxon": "3.4.4",
