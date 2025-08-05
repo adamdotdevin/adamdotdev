@@ -16,7 +16,7 @@
     "@twurple/chat": "^7.0.3",
     "@twurple/eventsub-ws": "^7.0.3",
     "hono": "4.0.1",
-    "obs-websocket-js": "^5.0.5",
+    "obs-websocket-js": "5.0.5",
     "zod": "3.23.8"
   },
   "devDependencies": {
