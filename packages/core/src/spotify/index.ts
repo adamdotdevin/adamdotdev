@@ -36,7 +36,10 @@ export module Spotify {
       console.error(response);
       return undefined;
     }
-    const [device] = response?.devices || [];
+    const devices = response?.devices ?? [];
+    console.log({ devices });
+    const [device] = devices.filter((d) => d.type === "computer") || [];
+
     deviceId = device?.id;
     return device?.id;
   };
@@ -62,7 +65,7 @@ export module Spotify {
       artwork:
         state?.item.type === "track"
           ? state?.item.album.images[0]?.url
-          : state?.item.images[0]?.url ?? state?.item.show.images[0]?.url,
+          : (state?.item.images[0]?.url ?? state?.item.show.images[0]?.url),
       progress: state?.progress_ms ?? undefined,
       volume: state?.device.volume_percent ?? undefined,
     }));
