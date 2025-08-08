@@ -14,6 +14,7 @@ bus.subscribe(
       table,
       realtime,
       secret.ObsPassword,
+      secret.ApiKey,
       service,
       ...Object.values(secret.Twitch),
       ...Object.values(secret.Spotify),
@@ -39,6 +40,7 @@ bus.subscribe(
       table,
       realtime,
       secret.ObsPassword,
+      secret.ApiKey,
       service,
       ...Object.values(secret.Twitch),
       ...Object.values(secret.Spotify),
@@ -64,6 +66,7 @@ bus.subscribe(
       table,
       realtime,
       secret.ObsPassword,
+      secret.ApiKey,
       ...Object.values(secret.Twitch),
       ...Object.values(secret.Spotify),
     ],
@@ -82,7 +85,7 @@ bus.subscribe(
 table.subscribe(
   {
     handler: "packages/functions/src/events/notification.handler",
-    link: [table, realtime, bus],
+    link: [table, realtime, bus, secret.ApiKey],
     permissions: [
       { actions: ["iot:*"], resources: ["*"] },
       { actions: ["secretsmanager:*"], resources: ["*"] },
