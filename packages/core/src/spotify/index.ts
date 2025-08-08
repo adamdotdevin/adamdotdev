@@ -38,7 +38,7 @@ export module Spotify {
     }
     const devices = response?.devices ?? [];
     console.log({ devices });
-    const [device] = devices.filter((d) => d.type === "computer") || [];
+    const [device] = devices.filter((d) => d.type === "Computer") || [];
 
     deviceId = device?.id;
     return device?.id;
