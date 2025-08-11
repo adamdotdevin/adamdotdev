@@ -70,7 +70,7 @@ export default function IntroPage() {
           }
           centerRight={
             <Clock
-              minutes={context.dev ? 0.25 : 10}
+              minutes={context.dev ? 0.25 : 5}
               onStopTime={AUDIO_FADE_LENGTH}
               className="absolute -top-[118px] right-0 h-[360px] w-[360px]"
               onStart={handleClockStart}

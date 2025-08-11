@@ -18,7 +18,8 @@ export const handler = bus.subscriber([...OBS.AllEvents], async (event) => {
         await Spotify.play({ fade: true });
       }
       if (event.properties.to === "Screen") {
-        await OBS.startTimer();
+        // Disable scene switching while we only use one camera
+        // await OBS.startTimer();
       }
       break;
 
