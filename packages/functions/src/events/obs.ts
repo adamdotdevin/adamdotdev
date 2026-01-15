@@ -1,14 +1,14 @@
 import { bus } from "sst/aws/bus";
 import { OBS } from "@adamdotdev/core/live/obs";
 import { Spotify } from "@adamdotdev/core/spotify/index";
-import { Live } from "@adamdotdev/core/live/index";
+// import { Live } from "@adamdotdev/core/live/index";
 
 export const handler = bus.subscriber([...OBS.AllEvents], async (event) => {
   console.log("event", event);
 
   switch (event.type) {
     case "obs.stream.started":
-      await Live.start();
+      // await Live.start();
       break;
     case "obs.scene.changed":
       if (
